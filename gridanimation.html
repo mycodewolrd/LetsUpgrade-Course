@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Animation</title>
+    <style>
+        body{
+            margin:0;
+        }
+        #grid{
+            height: 100vh;
+            background-color:blue;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;
+            transition: 1000ms;
+
+        }
+
+
+        :where(.left,.center,.right){
+            background-color: rgb(158, 158, 239);
+            transition: 10s;
+        }
+        :where(.left,.center,.right):hover{
+            background-color: blue;
+        }
+
+
+       #grid:has(.left:hover){
+        grid-template-columns: 2fr 1fr 1fr;
+       }
+       #grid:has(.center:hover){
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+            #grid:has(.right:hover){
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    </style>
+</head>
+<body>
+    <div id="grid">
+   <div class="left"><h1>*Page1</h1></div>
+
+
+   <div class="center"><h1>*Page2</h1></div> 
+
+
+   <div class="right"><h1>*Page3</h1></div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name:demo;
+            animation-duration: 4s;
+            animation-direction: alternate-reverse;
+            /* animation-direction:alternate; */
+            animation-iteration-count: infinite;
+        }
+        /* @keyframes demo{
+            from{background-color: red;}
+            to{background-color: blue;}
+        } */
+        @keyframes demo{
+            0%{background-color:green;}
+            25%{background-color: blue;margin-left: 200px;margin-top: 0px;}
+            50%{background-color: pink;margin-top: 200px;margin-left: 200px;}
+            75%{background-color: tomato;margin-top: 200px; margin-left: 0px;}
+            100%{background-color: seagreen;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation in css</h1>
+    <div></div>
+</body>
+</html>

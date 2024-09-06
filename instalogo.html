@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow:hidden;
+        }
+        
+        .outerlayer {
+             width: 200px;
+             height: 200px;
+              background: radial-gradient(at 30% 107%, #fdf497 0%, #fbe92ad1 5%, #fd5949 45%, #d6249f 70%, #a142f4 90%); 
+              border-radius: 35px; 
+              display: grid; 
+              place-items: center; }
+               /* innerside in outer box */
+               .innerlayer {
+                 width: 120px; 
+                height: 120px; 
+                border: 8px solid #fff;
+                 border-radius: 32px; 
+                 display: grid; 
+                 place-items: center;
+                  position: relative;
+                 } 
+                 /* center circle of logo*/ 
+                 .innerlayer::before { 
+                content: ''; 
+                 width: 45px; 
+                 height: 45px; 
+                 border: 10px solid #fff; 
+                 border-radius: 50%;
+                  background: transparent; 
+                  position: absolute; 
+                } 
+                /* top right circle of logo */ 
+                .innerlayer::after { 
+                content: '';
+               width: 10px; 
+               height: 10px;
+               border: 2px solid #fff; 
+               border-radius: 50%;
+                background: #fff;
+                position: absolute;
+                 top: 8px;
+                  right: 12px;
+                 }
+
+    </style>
+</head>
+<body>
+    
+   <div class="outerlayer">
+   <div class="innerlayer"></div>
+   </div>
+
+</body>
+</html>
